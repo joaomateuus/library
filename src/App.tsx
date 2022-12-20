@@ -2,13 +2,17 @@ import { useState } from 'react'
 import { AppRoutes } from './routes'
 import { Header } from './components/Header'
 import GlobalStyle from './styles/global';
+import light from './styles/themes/light'
+import { ThemeProvider } from 'styled-components';
 
-export const App = () => {
+export const App: React.FC = () => {
   return (
-    <div className="App">
-      <GlobalStyle />
-      <AppRoutes />
-      <Header />
-    </div>
+    <ThemeProvider theme={light}>
+      <div className="App">
+        <GlobalStyle/>
+        <AppRoutes />
+        <Header />
+      </div>
+    </ThemeProvider>
   )
 }

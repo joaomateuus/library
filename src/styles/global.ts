@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, DefaultTheme } from 'styled-components';
 
 export default createGlobalStyle`
     *{
@@ -8,8 +8,9 @@ export default createGlobalStyle`
     }
 
     body{
-        background: #f5f5f5;
-        font-family: sans;
-
+        background-color: ${props => props.theme.colors.background};
+        color: ${props => props.theme.colors.text};
+        font-family: sans-serif;
+        font-size: 14px;
     }
-`
+`;
