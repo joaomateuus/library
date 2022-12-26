@@ -4,10 +4,11 @@ import { Header } from './components/Header'
 import GlobalStyle from './styles/global';
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider, DefaultTheme } from 'styled-components';
+import { usePersistedState } from './utils/usePersistedState';
 
 export const App: React.FC = () => {
-  const [theme, setTheme] = useState(light)
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light);

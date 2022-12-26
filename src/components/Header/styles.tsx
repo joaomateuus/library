@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 70px;
+    height: 15vh;
     background: ${props => props.theme.colors.primary};
     display: flex;
     justify-content: space-between;
