@@ -19,9 +19,9 @@ export const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
+        {window.location.pathname !== '/' && window.location.pathname !== '/sign_up' ? <Header toggleTheme={toggleTheme} /> : null}
         <GlobalStyle />
         <AppRoutes />
-        {window.location.pathname !== '/' && window.location.pathname !== '/sign_up' ? <Header toggleTheme={toggleTheme} /> : null}
       </div>
     </ThemeProvider>
   )

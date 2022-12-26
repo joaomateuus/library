@@ -13,7 +13,7 @@ export const Header: React.FC<Props> = ({ toggleTheme }) => {
 
     return(
         <Container>
-            <h1>Hello</h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/1903/1903162.png" style={{ height: '60px', width:'60px' }} alt="" />
             <Switch
                 onChange={toggleTheme}
                 checked={title === 'dark'}
