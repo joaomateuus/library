@@ -20,11 +20,11 @@ export const Home: React.FC = (props: Props) => {
           image='https://pngimage.net/wp-content/uploads/2018/05/borrow-icon-png-3.png'
           route='/borrows'
          />
-        <Card
+        {/* <Card
           title='Cashier' 
           image='http://cdn.onlinewebfonts.com/svg/img_507209.png'
           route='/cashier'
-         />
+         /> */}
       </Container>
     </>
   )
