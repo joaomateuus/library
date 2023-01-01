@@ -16,10 +16,11 @@ export const Card = styled.div`
     justify-content: space-evenly;
     padding: 10px;
     height: 60vh;
-    width: 50vw;
+    width: 30vw;
     border-radius: 5px;
     font-size: 0.5rem;
     background-color: white;
+    margin: 10px;
 `
 
 export const CardContent = styled.div`

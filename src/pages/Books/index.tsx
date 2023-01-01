@@ -9,14 +9,14 @@ interface Books {
   subtitle: string;
   image: string;
   isbn13: string;
-}
+};
 
 export const Books: React.FC = () => {
   const [books, setBooks] = useState<Books[]>([]);
 
   useEffect( () => {
     getBooks();
-  }, [])
+  }, []);
 
   const getBooks = (() => {
    try {
@@ -26,16 +26,16 @@ export const Books: React.FC = () => {
    } catch (error) {
     console.log(error);
    }
-  })
+  });
 
-  const listBooks = books.map((book): React.ReactNode => {
+  const listBooks = books.map((book: Books): React.ReactNode => {
     return (
         <BooksCard 
           key={book.isbn13}
           {...book}
         />
       )
-  })
+  });
 
   return (
     <div>
@@ -46,11 +46,11 @@ export const Books: React.FC = () => {
           </TitleContainer>
           <SearchBar placeholder='Enter a name of a Book' />
         </Container>
-          <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center'}}>
-            <div style={{display: 'flex', alignItems: 'center',background: '#add8e6', justifyContent: 'space-evenly', height: '100vh', width: '50vw'}}>
-              {books ? listBooks : null}
-            </div>
-          </div>
+        <div style={
+          {display: 'grid', justifyContent: 'center', gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr)'}
+        }>
+          {books ? listBooks : null}
+        </div>
     </div>
   )
 }
