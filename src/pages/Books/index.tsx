@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import { Container, TitleContainer } from './styles';
 import { SearchBar } from '../../components/SearchBar';
 import { BooksCard } from '../../components/BooksCard';
-import axios from 'axios';
 import BooksService from '../../services/Books/BooksService';
 
 interface Books {
@@ -47,9 +46,11 @@ export const Books: React.FC = () => {
           </TitleContainer>
           <SearchBar placeholder='Enter a name of a Book' />
         </Container>
-        <div style={{background: '#add8e6'}}>
-          {books ? listBooks : null}
-        </div>
+          <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center'}}>
+            <div style={{display: 'flex', alignItems: 'center',background: '#add8e6', justifyContent: 'space-evenly', height: '100vh', width: '50vw'}}>
+              {books ? listBooks : null}
+            </div>
+          </div>
     </div>
   )
 }
