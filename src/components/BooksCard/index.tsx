@@ -10,16 +10,14 @@ interface Props {
 
 export const BooksCard: React.FC<Props> = ({title, subtitle, image, isbn13}) => {
   return (
-      <div style= {
-        { padding: '12px'}
-      }>
-      <Card>
-        <CardContent>   
-          <h1 style={{marginLeft: '5vw'}}>{title}</h1>
-          <img src={image} alt="" />
-        </CardContent>
-        <span style={{fontSize: '1rem'}}>{subtitle}</span>
-      </Card>
+      <div>
+        <Card>
+          <CardContent>   
+            <h1 style={{marginLeft: '5vw'}}>{title}</h1>
+            <img src={image} alt="" />
+          </CardContent>
+          <span style={{fontSize: '1rem'}}>{subtitle}</span>
+        </Card>
     </div>
   )
 }

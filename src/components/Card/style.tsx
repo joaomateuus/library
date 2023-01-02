@@ -22,6 +22,8 @@ export const CardDiv = styled.div`
     position: relative;
     left: 0px;
     padding: 15px;
+    color: black;
+    background-color: #A8CCC9;
 
     &:hover{
         transform: translateY(-20px);
